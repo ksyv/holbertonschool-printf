@@ -7,9 +7,10 @@
  * @specifier: type of call.
  * @...: other arguments
 */
-void choice_function(char specifier, va_list list_of_argument)
+int choice_function(char specifier, va_list list_of_argument)
 {
 	unsigned int index = 0;
+	int length = 0;
 	choiceprintfunction_t typeofarg[] = {
 		{"c", print_char},
 		{"s", print_string},
@@ -22,8 +23,9 @@ void choice_function(char specifier, va_list list_of_argument)
 
 	if (index < 4)
 	{
-		typeofarg[index].print(list_of_argument);
+		length = typeofarg[index].print(list_of_argument);
 	}
 	else
-		print_mod();
+		length = print_mod;
+	return (length);
 }
