@@ -5,7 +5,8 @@
  * choice_function - choice a function to print the correct format
  * according to the call
  * @specifier: type of call.
- * @...: other arguments
+ * @list_of_argument: list of other arguments
+ * Return: number of characters printed
 */
 int choice_function(char specifier, va_list list_of_argument)
 {
