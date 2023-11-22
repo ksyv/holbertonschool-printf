@@ -30,6 +30,7 @@ int print_string(va_list arg)
 	string = va_arg(arg, char *);
 	length = _strlen(string);
 	write(STDOUT_FILENO, string, length);
+	length -= 1;
 	return (length);
 }
 
