@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
         else
         {
             index++;
-            choice_function(format[index], list_of_argument);
+            choice_function(format[index + 1], list_of_argument);
         }
     }
     return (numberprintchar);
