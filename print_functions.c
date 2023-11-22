@@ -34,25 +34,24 @@ void print_string(va_list arg)
 
 void print_int(va_list arg)
 {
-    char* num;
+    int argnum = va_arg(arg, int);
+    unsigned int num = argnum;
+    int define_num_of_numbers = 1;
 
-    *num = va_arg(arg, int);
-    write(STDOUT_FILENO, &num, 4);
+    if (argnum < 0)
+    {
+        _putchar('-');
+        num = -argnum;
+    }
+    while (num/define_num_of_numbers > 9)
+        define_num_of_numbers *= 10;
+    while (define_num_of_numbers >= 1)
+    {
+        _putchar('0' + num/define_num_of_numbers);
+        num %= define_num_of_numbers;
+        define_num_of_numbers /= 10;
+    }
 }
-
-/**
- * print_dec - Prints a dedcimal number.
- * @arg: arguments pointed
- */
-
-void print_dec(va_list arg)
-{
-    char *decimal;
-
-    *decimal = va_arg(arg, int);
-    write(STDOUT_FILENO, &decimal, 4);
-}
-
 /**
  * print_mod - Prints a modulo.
  * @arg: arguments pointed

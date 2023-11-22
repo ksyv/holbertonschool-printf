@@ -14,13 +14,13 @@ void choice_function(char specifier, va_list list_of_argument)
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
-		{"d", print_dec},
+		{"d", print_int},
 
 	};
-	while (index < 2 && (specifier != *(typeofarg[index].symbol)))
+	while (index < 4 && (specifier != *(typeofarg[index].symbol)))
 		index++;
 
-	if (index < 2)
+	if (index < 4)
 	{
 		typeofarg[index].print(list_of_argument);
 	}
