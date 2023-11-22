@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 			temporary_value = choice_function(format[index], list_of_argument);
 			numberprintchar += temporary_value;
 		}
+	va_end(list_of_argument);
 	}
 	return (numberprintchar);
 }
