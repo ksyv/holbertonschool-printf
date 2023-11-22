@@ -9,10 +9,7 @@
 
 int print_char(va_list arg)
 {
-	char letter;
-
-	letter = va_arg(arg, int);
-	write(STDOUT_FILENO, &letter, 1);
+	_putchar(va_arg(arg, int));
 	return (1);
 }
 
@@ -30,7 +27,6 @@ int print_string(va_list arg)
 	string = va_arg(arg, char *);
 	length = _strlen(string);
 	write(STDOUT_FILENO, string, length);
-	length -= 1;
 	return (length);
 }
 
