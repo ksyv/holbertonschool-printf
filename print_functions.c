@@ -25,8 +25,11 @@ int print_string(va_list arg)
 	int length = 0;
 
 	string = va_arg(arg, char *);
-	length = _strlen(string);
-	write(STDOUT_FILENO, string, length);
+	while (string[length] != '\0')
+	{
+		putchar(string[length]);
+		length++;
+	}
 	return (length);
 }
 
