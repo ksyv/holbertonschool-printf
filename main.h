@@ -5,7 +5,7 @@
 typedef struct choiceprintfunction
 {
 	char *symbol;
-	void (*print)(va_list arg);
+	void (*print)(va_list);
 } choiceprintfunction_t;
 
 int _printf(const char *format, ...);
@@ -16,6 +16,6 @@ void print_string(va_list arg);
 void print_dec(va_list arg);
 void print_int(va_list arg);
 void print_mod(void);
-void choice_function(char specifier, va_list list_of_argument);
+void choice_function(char specifier, va_list);
 
 #endif
