@@ -21,6 +21,8 @@ int _printf(const char *format, ...)
 			_putchar(format[index]);
 			numberprintchar++;
 		}
+		else if (format[index] == '%' && (!format[index + 1] || format[index + 1] == '\0'))
+				return (-1);
 		else
 		{
 			index++;
