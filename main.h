@@ -15,7 +15,7 @@ int print_char(va_list arg);
 int print_string(va_list arg);
 int print_dec(va_list arg);
 int print_int(va_list arg);
-int print_mod(void);
+void print_mod(void);
 int choice_function(char specifier, va_list);
 
 #endif

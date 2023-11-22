@@ -65,10 +65,9 @@ int print_int(va_list arg)
  * @arg: arguments pointed
  */
 
-int print_mod(void)
+void print_mod(void)
 {
     char modulo = 37;
     write(STDOUT_FILENO, &modulo, 1);
-    return (1);
 }
 

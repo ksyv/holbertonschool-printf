@@ -26,6 +26,9 @@ int choice_function(char specifier, va_list list_of_argument)
 		length = typeofarg[index].print(list_of_argument);
 	}
 	else
-		length = print_mod;
+	{
+		print_mod();
+		length = 1;
+	}
 	return (length);
 }
