@@ -21,15 +21,20 @@ int _printf(const char *format, ...)
 			_putchar(format[index]);
 			numberprintchar++;
 		}
-		else if (format[index] == '%' && (!format[index + 1] || format[index + 1] == '\0'))
-				return (-1);
 		else
 		{
-			index++;
-			temporary_value = choice_function(format[index], list_of_argument);
-			numberprintchar += temporary_value;
+			if (!format[index + 1] || format[index + 1] == '\0')
+			{
+				return (-1);
+			}
+			else
+			{
+				index++;
+				temporary_value = choice_function(format[index], list_of_argument);
+				numberprintchar += temporary_value;
+			}
 		}
-	va_end(list_of_argument);
 	}
+	va_end(list_of_argument);
 	return (numberprintchar);
 }
