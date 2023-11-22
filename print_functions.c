@@ -27,7 +27,7 @@ int print_string(va_list arg)
 	string = va_arg(arg, char *);
 	while (string[length] != '\0')
 	{
-		putchar(string[length]);
+		_putchar(string[length]);
 		length++;
 	}
 	return (length);
