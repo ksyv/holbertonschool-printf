@@ -26,11 +26,10 @@ int choice_function(char specifier, va_list list_of_argument)
 	{
 		length = typeofarg[index].print(list_of_argument);
 	}
-	else if (specifier != '%')
+	else
 	{
 		print_mod();
 		length = 1;
-		return (length);
 	}
-	return (0);
+	return (length);
 }
