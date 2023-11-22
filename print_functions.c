@@ -71,7 +71,5 @@ int print_int(va_list arg)
 
 void print_mod(void)
 {
-	char modulo = 37;
-
-	write(STDOUT_FILENO, &modulo, 1);
+	_putchar(37);
 }
