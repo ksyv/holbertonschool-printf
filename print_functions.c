@@ -10,8 +10,8 @@ void print_char(va_list arg)
 {
 	char letter;
 
-	letter = va_arg(arg, char);
-	write(STDOUT_FILENO, letter, 1);
+	letter = va_arg(arg, int);
+	write(STDOUT_FILENO, &letter, 1);
 }
 
 /**
@@ -34,10 +34,10 @@ void print_string(va_list arg)
 
 void print_int(va_list arg)
 {
-    int num;
+    char* num;
 
-    num = va_arg(arg, int);
-    write(STDOUT_FILENO, num, 4);
+    *num = va_arg(arg, int);
+    write(STDOUT_FILENO, &num, 4);
 }
 
 /**
@@ -47,10 +47,10 @@ void print_int(va_list arg)
 
 void print_dec(va_list arg)
 {
-    int decimal;
+    char* decimal;
 
-    decimal = va_arg(arg, int);
-    write(STDOUT_FILENO, decimal, 4);
+    *decimal = va_arg(arg, int);
+    write(STDOUT_FILENO, &decimal, 4);
 }
 
 /**
@@ -58,11 +58,9 @@ void print_dec(va_list arg)
  * @arg: arguments pointed
  */
 
-void print_mod(va_list arg)
+void print_mod(void)
 {
-    char modulo;
-
-    modulo = va_arg(arg, char);
-    write(STDOUT_FILENO, '%', 1);
+    char modulo = 37;
+    write(STDOUT_FILENO, &modulo, 1);
 }
 
