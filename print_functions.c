@@ -25,6 +25,8 @@ int print_string(va_list arg)
 	int length = 0;
 
 	string = va_arg(arg, char *);
+	if (string == NULL)
+		string = "(null)";
 	while (string[length] != '\0')
 	{
 		_putchar(string[length]);
