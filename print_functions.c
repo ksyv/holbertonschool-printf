@@ -47,7 +47,7 @@ void print_int(va_list arg)
 
 void print_dec(va_list arg)
 {
-    char* decimal;
+    char *decimal;
 
     *decimal = va_arg(arg, int);
     write(STDOUT_FILENO, &decimal, 4);
