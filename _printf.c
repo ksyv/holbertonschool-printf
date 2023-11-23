@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _printf - write a charater string a completer
- * @format: string of character et a completer
+ * _printf - writes a string, identifies formatted argument
+ * print calls in this string, and replaces the calls
+ * with the corresponding arguments.
+ * @format: string of character
  * Return: number of character printed
  */
 int _printf(const char *format, ...)

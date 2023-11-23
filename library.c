@@ -16,7 +16,7 @@ int _putchar(char c)
 
 /**
  * _strlen - returns the length of a string
- * @s: variable insert
+ * @s: string measured
  * Return: number of characters
  */
 int _strlen(char *s)

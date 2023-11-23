@@ -3,7 +3,7 @@
 
 /**
  * print_char - prints a char.
- * @arg: arguments pointed
+ * @arg: arguments pointed == char who be printed
  * Return: number of character 1
  */
 
@@ -14,8 +14,8 @@ int print_char(va_list arg)
 }
 
 /**
- * print_string - prints a string.
- * @arg: arguments pointed
+ * print_string - prints a string of character.
+ * @arg: arguments pointed == string who be printed.
  * Return: number of characters
  */
 
@@ -37,7 +37,7 @@ int print_string(va_list arg)
 
 /**
  * print_int - prints an int.
- * @arg: arguments pointed
+ * @arg: arguments pointed == print who be pinted
  * Return: number of numbers
  */
 
