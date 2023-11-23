@@ -26,7 +26,7 @@ int choice_function(char specifier, va_list list_of_argument)
 	{
 		length = typeofarg[index].print(list_of_argument);
 	}
-	else if (specifier == '%')
+	else if (specifier == '%' || specifier == '!' || specifier == 'K')
 	{
 		print_mod();
 		length = 1;
