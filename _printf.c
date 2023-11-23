@@ -23,8 +23,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (!format[index + 1] || format[index + 1] == '\0'
-			|| format[index + 1] == '!' || format[index + 1] == 'K')
+			if (!format[index + 1] || format[index + 1] == '\0')
 			{
 				return (-1);
 			}
@@ -32,6 +31,8 @@ int _printf(const char *format, ...)
 			{
 				index++;
 				temporary_value = choice_function(format[index], list_of_argument);
+				if (temporary_value == -1)
+					return (-1);
 				numberprintchar += temporary_value;
 			}
 		}
