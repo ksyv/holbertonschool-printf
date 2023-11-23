@@ -29,7 +29,17 @@ int choice_function(char specifier, va_list list_of_argument)
 	else if (specifier == '%' || specifier == '!' || specifier == 'K')
 	{
 		print_mod();
-		length = 1;
+		if (specifier == '!')
+		{
+			_putchar('!');
+			length += 1;
+		}
+				if (specifier == 'K')
+		{
+			_putchar('K');
+			length += 1;
+		}
+		length += 1;
 	}
 	else
 		length = -1;
