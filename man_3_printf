@@ -1,4 +1,6 @@
-.TH _printf(3) "November 2023" "Version 1.0"
+.\" Manpage for _printf.
+
+.TH _PRINTF 3 "24 November 2023" "Version 1.0" "Linux Programmer's Manual"
 
 .SH NAME
 _printf - Print formatted output
@@ -19,16 +21,20 @@ A pointer to a const char that contains the format string. The format string may
 .SH FORMAT SPECIFIERS
 The conversion specifiers supported by _printf are:
 
-.TP "%d, %i"
+.TP 
+.B %d, %i
 Prints a signed integer in decimal format.
 
-.TP "%s"
+.TP 
+.B %s
 Prints a null-terminated string.
 
-.TP "%c"
+.TP 
+.B %c
 Prints a character.
 
-.TP "%"
+.TP 
+.B %
 Prints a percent character '%'.
 
 .SH RETURN VALUE
@@ -37,36 +43,31 @@ The _printf function returns the total number of characters printed (excluding t
 .SH EXAMPLES
 
 .SS DECIMAL
-_printf("Decimal: %d, Integer: %i", 4, 2);
+_printf("Decimal: %d, Integer: %i\n", 4, 2);
 
 Output:
 Decimal: 4, Integer: 2
 
 .SS CHARACTER
-_printf("Character: %c", 'C');
+_printf("Character: %c\n", 'C');
 
 Output:
 Character: C
 
 .SS STRING
-_printf("%s", "Hello, world!");
+_printf("%s", "Hello, world!\n");
 
 Output:
 Hello, world!
 
 .SS PERCENT SYMBOL
-_printf("Discount: 100%%!");
+_printf("Discount: 100%%!\n");
 
 Output:
 Discount: 100%!
 
 .SH NOTES
 This implementation of _printf supports a limited set of format specifiers, including %d for integers and %s for strings. 
-
-.SH AUTHOR
-Kevin Viais
-
-Axel Sowa
 
 .SH SEE ALSO
 Standard 'printf' function - consult 'man printf' for more information.
