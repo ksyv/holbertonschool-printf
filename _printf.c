@@ -23,7 +23,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (!format[index + 1] || format[index + 1] == '\0')
+			if (!format[index + 1] || format[index + 1] == '\0'
+			|| format[index + 1] == '!' || format[index + 1] == 'K')
 			{
 				return (-1);
 			}
