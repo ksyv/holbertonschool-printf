@@ -34,7 +34,7 @@ int choice_function(char specifier, va_list list_of_argument)
 			_putchar('!');
 			length += 1;
 		}
-				if (specifier == 'K')
+		if (specifier == 'K')
 		{
 			_putchar('K');
 			length += 1;
