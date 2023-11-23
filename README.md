@@ -56,23 +56,31 @@ To display the man page of _printf function run this command :
 
 ## EXAMPLES
 
-String (%s)
-`_printf("%s", "Hello, world!\n");`
+**String (%s)**
+```
+_printf("%s", "Hello, world!\n");
+```
 Output:
 Hello, world!
 
-Character (%c)
-`_printf("Character: %c\n", 'C');`
+**Character (%c)**
+```
+_printf("Character: %c\n", 'C');
+```
 Output :
 Character: C
 
-Decimal (%i, %d)
-`_printf("Decimal: %d, Integer: %i\n", 4, 2);`
+**Decimal (%i, %d)**
+```
+_printf("Decimal: %d, Integer: %i\n", 4, 2);
+```
 Output :
 Decimal: 4, Integer: 2
 
-Percent sign (%%)
-`_printf("Discount: 100%%!\n");`
+**Percent sign (%%)**
+```
+_printf("Discount: 100%%!\n");
+```
 Output:
 Discount: 100%!
 
