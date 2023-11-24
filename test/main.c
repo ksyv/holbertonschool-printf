@@ -40,7 +40,33 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-	_printf("%!%K\n");
+	_printf("%!%K\n");/*test with %! and %K identifier*/
 	printf("%!%K\n");
+	_printf("%i\n", 2147483647); /* Test with int max*/
+	printf("%i\n", 2147483647);
+	_printf("%i\n", -2147483648); /* Test with int min*/
+	printf("%i\n", -2147483648);
+	_printf("%i\n", 2147483650); /* Test with more of int max*/
+	printf("%i\n", 2147483650);
+	_printf("%i\n", -2147483650); /* Test with less of int min*/
+	printf("%i\n", -2147483650);
+	_printf("%c\n", "toolong"); /*Test %c with string of carac*/
+	printf("%c\n", "toolong");
+	_printf("%s\n", "Lorem ipsum dolor sit amet,\
+	 consectetur adipiscing elit, sed do eiusmod tempor incididunt \
+	 ut labore et dolore magna aliqua. Ut enim ad minim veniam, \
+	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \
+	 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate \
+	  velit esse cillum dolore eu fugiat nulla pariatur. \
+	  Excepteur sint occaecat cupidatat non proident, \
+	  sunt in culpa qui officia deserunt mollit anim id est laborum.");
+	printf("%s\n", "Lorem ipsum dolor sit amet,\
+	 consectetur adipiscing elit, sed do eiusmod tempor incididunt \
+	 ut labore et dolore magna aliqua. Ut enim ad minim veniam, \
+	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \
+	 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate \
+	  velit esse cillum dolore eu fugiat nulla pariatur. \
+	  Excepteur sint occaecat cupidatat non proident, \
+	  sunt in culpa qui officia deserunt mollit anim id est laborum.");
     return (0);
 }
