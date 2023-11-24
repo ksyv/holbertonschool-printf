@@ -10,8 +10,13 @@ This project is a custom implementation of the printf function in C with its mos
 
 **The `_printf` function was coded on an Ubuntu 20.04 LTS machine with `gcc` version 11.4.0**
 
+**Here are the options to be used for the compilation :**
+
+```
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+```
+
 - Allowed editors: `vi`, `vim`, `emacs`
-- All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - All your files should end with a new line
 - A `README.md` file, at the root of the folder of the project is mandatory
 - Your code should use the `Betty style`. It will be checked using 'betty-style.pl' and 'betty-doc.pl'
@@ -87,6 +92,14 @@ Discount: 100%!
 ## TESTING
 
 ### EXAMPLES
+
+**INPUT**
+
+![Testing's input](/images_readme/testing_input.png)
+
+**OUTPUT**
+
+![Testing's output](/images_readme/testing_output.png)
 
 ### VALGRIND
 
